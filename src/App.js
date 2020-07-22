@@ -1,26 +1,46 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React,{useState, useEffect} from 'react';
+import SearchBar from './SearchBar';
+import UserProfile from './UserProfile';
 
-function App() {
+const App = () => {
+
+    const [userData , setUserData] = useState({});
+
+    useEffect(() => {
+
+        const getUserData = async () => {
+
+          try {
+
+            const endPoint = await fetch(` https://api.github.com/users/rodrigopk`);
+
+            const response =  await endPoint.json();
+
+            setUserData(response);
+
+
+          } catch(e) {
+            console.log(e.message)
+          }
+
+        };
+          ///calling the funcion
+        getUserData();
+
+
+    },[]);
+
+  console.log(userData, 'user data should be here')
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Github munich test</h1>
+
+      <UserProfile/>
+
+      <SearchBar/>
     </div>
-  );
+  )
 }
 
 export default App;
