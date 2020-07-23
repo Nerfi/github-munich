@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import './layout.css';
 
 const SearchBar = () => {
 
@@ -13,7 +14,7 @@ const SearchBar = () => {
 
 
   return(
-    <div className="SearchBar">
+    <div className="split right">
       <input type="text" placeholder="search for a repo" value={query} onChange={handleChange}/>
       <button onClick={handleClick}>Search Repo</button>
     </div>
