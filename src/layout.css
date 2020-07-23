@@ -1,25 +1,58 @@
-.split {
-  height: 100%;
-  width: 50%;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  overflow-x: hidden;
-  padding-top: 20px;
-}
 
-
-
+/* Control the left side */
 .left {
-  left: 15px;
-  padding-top: 15vh;
-  width: 50vh;
-
+  left: 0;
+  border-style: dotted;
 
 }
 
+/* Control the right side */
 .right {
   right: 0;
+  border-style: dashed;
+
+}
 
 
+
+/* tiny img nex to profile photo*/
+.js-user-status {
+  padding-left: 35vh;
+
+}
+  /* lo dejamos para el final
+ .fa {
+  margin-bottom: -40px;
+  color: red;
+}
+
+/* description */
+.description {
+  width: 300px;
+}
+
+
+
+/* NEW TESTING */
+
+.split {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.column {
+  flex: 1 1 auto;
+  height: 100%;
+  width: 40%;
+  border-style: dotted;
+}
+
+.column1 {
+  float: right;
+  flex: 1 1 auto;
+  height: 100%;
+  width:60%;
+  border-style: dashed;
 }

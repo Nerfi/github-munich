@@ -43,6 +43,7 @@ const App = () => {
     <div>
   {/* mandar como props: img ,name, description,and github  name */}
 
+      <SearchBar/>
       <UserProfile
       name={userData.name}
        img={userData.avatar_url}
@@ -50,7 +51,6 @@ const App = () => {
        github={userData.login}
        />
 
-      <SearchBar/>
     </div>
   )
 }
