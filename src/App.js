@@ -1,6 +1,8 @@
 import React,{useState, useEffect} from 'react';
 import SearchBar from './SearchBar';
 import UserProfile from './UserProfile';
+import Navbar from './Navbar';
+
 
 const App = () => {
 
@@ -42,7 +44,7 @@ const App = () => {
   return (
     <div>
   {/* mandar como props: img ,name, description,and github  name */}
-
+    <Navbar/>
       <SearchBar/>
       <UserProfile
       name={userData.name}
