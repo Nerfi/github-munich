@@ -11,7 +11,7 @@ const UserProfile = ({name, img, description,github}) => {
 
       {/* DEJAR para otro momento la img de al lado de la foto*/}
       <div className="js-user-status">
-        <i class="fa fa-smile-o fa-2x" aria-hidden="true"></i>
+        <i className="fa fa-smile-o fa-2x" aria-hidden="true"></i>
       </div>
 
       <h2> {name}</h2>

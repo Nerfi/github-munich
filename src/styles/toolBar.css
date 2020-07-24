@@ -1,0 +1,13 @@
+.toolbar {
+  margin: 20px;
+  border-bottom: 2px solid grey;
+
+}
+
+
+
+.Link {
+  color: black;
+  font-size: 19px;
+  font-weight: bold;
+}
