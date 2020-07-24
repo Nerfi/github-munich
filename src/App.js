@@ -1,7 +1,8 @@
 import React,{useState, useEffect} from 'react';
 import SearchBar from './SearchBar';
 import UserProfile from './UserProfile';
-import Navbar from './Navbar';
+import ToolBar from './Navbar';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 const App = () => {
@@ -44,7 +45,7 @@ const App = () => {
   return (
     <div>
   {/* mandar como props: img ,name, description,and github  name */}
-    <Navbar/>
+    <ToolBar/>
       <SearchBar/>
       <UserProfile
       name={userData.name}

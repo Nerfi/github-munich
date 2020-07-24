@@ -7,7 +7,7 @@ const UserProfile = ({name, img, description,github}) => {
   return(
     <div className="column">
 
-      <img className="ui small circular image" style={{borderRadius: '50%', width: '40vh'}} src={img} alt={img}/>
+      <img className="ui small circular image" style={{borderRadius: '50%', width: '35vh'}} src={img} alt={img}/>
 
       {/* DEJAR para otro momento la img de al lado de la foto*/}
       <div className="js-user-status">

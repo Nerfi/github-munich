@@ -47,6 +47,7 @@
   height: 100%;
   width: 40%;
   border-style: dotted;
+  max-width: 50%;
 }
 
 .column1 {
@@ -55,4 +56,20 @@
   height: 100%;
   width:60%;
   border-style: dashed;
+
+}
+
+
+
+
+/*  ADDING MEDIA QUERYS FOR DIFFERENT DEVICES, check out */
+@media only screen and (max-width: 600px) {
+  .image {
+  flex: 1 1 auto;
+  height: 100%;
+  width: 40%;
+  border-style: dotted;
+  max-width: 50%;
+
+  }
 }
