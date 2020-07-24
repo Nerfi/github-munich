@@ -11,7 +11,7 @@ const SearchBar = () => {
 
   const handleClick = () => {
     //no preventdefault here since we're not in using a form
-    console.log('working')
+    alert('working')
   }
 
   //EN ESTE COMPONENT VOY A RENDERIZAR LOS REPOSITORIOS DE CADA USUARIO
@@ -19,13 +19,18 @@ const SearchBar = () => {
 //EN ESTE COMPONENT PUEDE QUE TENGA QUE ELIMINAR EL BOTTON DE SEARCH
 
   return(
-    <div>
-    <div className="column1 search">
+    <div className="column1">
 
-      <input  className="input" type="text" placeholder="Find a repository..." value={query} onChange={handleChange}/>
+      <form onSubmit={handleClick}>
 
-      <RenderRepos repo={query}/>
-    </div>
+      <div className="search">
+
+        <input  className="input" type="text" placeholder="Find a repository..." value={query} onChange={handleChange}/>
+
+      </div>
+        <RenderRepos repo={query}/>
+
+      </form>
   </div>
   )
 }

@@ -22,12 +22,6 @@ const App = () => {
 
             setUserData(response);
 
-            //fetching repos, need some state to hold the repos
-                const repositories = await fetch(response.repos_url);
-                const repoJson = await repositories.json();
-                console.log(repoJson);
-
-
 
           } catch(e) {
             console.log(e.message)
