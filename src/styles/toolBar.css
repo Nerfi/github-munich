@@ -1,6 +1,8 @@
 .toolbar {
   margin: 20px;
   border-bottom: 2px solid grey;
+  padding-left: 8%;
+
 
 }
 
@@ -8,6 +10,6 @@
 
 .Link {
   color: black;
-  font-size: 19px;
+  font-size: 14px;
   font-weight: bold;
 }

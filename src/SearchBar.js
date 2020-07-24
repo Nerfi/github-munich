@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import './layout.css';
 import RenderRepos from './render-repos';
+import './styles/searchBar.css';
 
 const SearchBar = () => {
 
@@ -15,13 +16,17 @@ const SearchBar = () => {
 
   //EN ESTE COMPONENT VOY A RENDERIZAR LOS REPOSITORIOS DE CADA USUARIO
 
+//EN ESTE COMPONENT PUEDE QUE TENGA QUE ELIMINAR EL BOTTON DE SEARCH
 
   return(
-    <div className="column1">
-      <input type="text" placeholder="search for a repo" value={query} onChange={handleChange}/>
-      <button onClick={handleClick}>Search Repo</button>
-      <RenderRepos/>
+    <div>
+    <div className="column1 search">
+
+      <input  className="input" type="text" placeholder="Find a repository..." value={query} onChange={handleChange}/>
+
+      <RenderRepos repo={query}/>
     </div>
+  </div>
   )
 }
 

@@ -48,7 +48,7 @@
   width: 30%;
   border-style: dotted;
   max-width: 50%;
-  margin-top: -30px;
+  margin-top: -50px;
   padding-left:  35px;
 }
 
@@ -70,6 +70,7 @@
 
 
 
+
 /*  ADDING MEDIA QUERYS FOR DIFFERENT DEVICES, check out
 NEED TO ADD MEDIA QUERYS FOR PRETTY MUCH ALL THE SCREENS IN */
 @media only screen and (max-width: 600px) {
@@ -80,5 +81,49 @@ NEED TO ADD MEDIA QUERYS FOR PRETTY MUCH ALL THE SCREENS IN */
   border-style: dotted;
   max-width: 50%;
 
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .image {
+  flex: 1 1 auto;
+  height: 100%;
+  width: 60%;
+  border-style: dotted;
+  max-width: 50%;
+
+  }
+
+  .column {
+    flex: 1 1 auto;
+  height: 100%;
+  width: 300%;
+  border-style: dotted;
+  max-width: 50%;
+  padding-left:  35px;
+  }
+
+
+  .column1 {
+  float: right;
+  flex: 1 1 auto;
+  height: 80%;
+  width:50%;
+  border-style: dashed;
+
+}
+
+}
+
+
+@media only screen and (min-width: 992px) {
+  .column {
+    width: 480px;
+  }
+
+  .column1 {
+    width: 64.5%;
+    height: 80vh;
+    margin-top: -20px;
   }
 }
