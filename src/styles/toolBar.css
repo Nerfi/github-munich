@@ -1,7 +1,10 @@
 .toolbar {
   margin: 20px;
   border-bottom: 2px solid grey;
-  padding-left: 8%;
+  padding-left: 40%;
+  position: fixed;
+  top: 0;
+  overflow: hidden;
 
 
 }
