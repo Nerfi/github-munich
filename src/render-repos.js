@@ -5,6 +5,10 @@ const RenderRepos = ({repo}) => {
 
   const [repos, setRepos] = useState([]);
 
+  //seems to be working but not sure
+
+  const [searchRepo, setSearchRepo] = useState([]);
+
   useEffect(() => {
 
     const getRepos = async () => {
@@ -26,12 +30,18 @@ const RenderRepos = ({repo}) => {
     getRepos();
 
 
+
+
   },[]);
+
+  //login the searched repos
+  console.log(searchRepo, 'aqui estan los repos buscados por el user')
 
   //tengo que iterar en esta array de objetos
   console.log(typeof(repo) ,  'the typeof props is here weyy')
 
-  console.log(repo, 'repo object is here');
+  //this line is working and given me and array of objects
+  console.log(repo, 'repo items is here');
 
   //new try out
 
@@ -52,24 +62,26 @@ const RenderRepos = ({repo}) => {
 
   )
 
+  console.log(searchRepo,'aqui esta search repo state')
 
-  if(repo) {
-    return (
-      //trying to iterate over the array that I got back from my query string
-      reposRendered = repo.map(repo => {
-        return  <p>{repo.full_name}</p>
 
-      })
-    )
-  }
+  //if(repo.items) {
+
+    //setSearchRepo(repo.items)
+
+     // trying to iterate over the array that I got back from my query string, not working
+      //reposRendered = repo.items.map(repo => {
+        //return  <h1>{repo.full_name}</h1>
+
+      //}//)
+
+  //}
 
 
 
 
   return(
     <div>
-
-    <p>{repo.name}</p>
 
     {reposRendered}
 

@@ -15,11 +15,10 @@ const SearchBar = () => {
 
     try {
 
-      //const queryString = await fetch(`https://api.github.com/search/repositories?q=repo:rodrigopk/${query}`) ;
-
       const anotherFetch = await fetch(`https://api.github.com/search/repositories?q=${query}+user:rodrigopk`)
 
-      const response = anotherFetch.json();
+      const response = await anotherFetch.json();
+
       setQuery(response);
 
     }catch(e) {
@@ -32,6 +31,7 @@ const SearchBar = () => {
 
   }
 
+  console.log(query, 'the query is here')
 
 
   return(
