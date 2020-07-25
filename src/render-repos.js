@@ -1,6 +1,6 @@
 import React,{useState, useEffect} from 'react';
 import './styles/renderRepos.css';
-/* este component va a aceptar los props que searBar le va a pasar */
+
 const RenderRepos = ({repo}) => {
 
   const [repos, setRepos] = useState([]);
@@ -24,10 +24,18 @@ const RenderRepos = ({repo}) => {
 
   },[]);
 
+  //tengo que iterar en esta array de objetos
+
+  console.log(repo, 'repo prop is here')
+
+  if (repo.length > 0) {
+
+  }
 
 
   return(
     <div>
+
 
     {repos.map(repo => {
       return (

@@ -9,12 +9,33 @@ const SearchBar = () => {
 
   const handleChange = (e) => setQuery(e.target.value);
 
-  const handleClick = () => {
-    //no preventdefault here since we're not in using a form
-    alert('working')
+  const handleClick = async (e) => {
+
+    e.preventDefault();
+
+    try {
+
+      //const queryString = await fetch(`https://api.github.com/search/repositories?q=repo:rodrigopk/${query}`) ;
+
+      const anotherFetch = await fetch(`https://api.github.com/search/repositories?q=${query}+user:rodrigopk`)
+
+      const response = anotherFetch.json();
+      setQuery(response);
+
+    }catch(e) {
+
+      alert( 'the error is ' + e)
+    }
+
   }
 
-  //EN ESTE COMPONENT VOY A RENDERIZAR LOS REPOSITORIOS DE CADA USUARIO
+  console.log(query)
+
+
+  /* For example, if you wanted to search for all repositories owned by defunkt that contained the word GitHub
+   and Octocat in the README file, you would use the following query with the search repositories endpoint:
+
+q=GitHub+Octocat+in:readme+user:defunkt*/
 
 //EN ESTE COMPONENT PUEDE QUE TENGA QUE ELIMINAR EL BOTTON DE SEARCH
 
