@@ -15,6 +15,9 @@ const RenderRepos = ({repo}) => {
         const response = await getData.json();
         setRepos(response);
 
+
+
+
       }catch(e) {
         console.log(e,'this is the error');
       }
@@ -22,33 +25,53 @@ const RenderRepos = ({repo}) => {
 
     getRepos();
 
+
   },[]);
 
   //tengo que iterar en esta array de objetos
+  console.log(typeof(repo) ,  'the typeof props is here weyy')
 
-  console.log(repo, 'repo prop is here')
+  console.log(repo, 'repo object is here');
 
-  if (repo.length > 0) {
+  //new try out
 
-  }
+  let reposRendered = (
 
-
-  return(
-    <div>
-
-
-    {repos.map(repo => {
+        repos.map(repo => {
       return (
         <div className="repos">
         <ul>
           <li>{repo.name}</li>
           <li>{repo.description}</li>
-          <li></li>
+
         </ul>
 
         </div>
         )
-    })}
+    })
+
+  )
+
+
+  if(repo) {
+    return (
+      //trying to iterate over the array that I got back from my query string
+      reposRendered = repo.map(repo => {
+        return  <p>{repo.full_name}</p>
+
+      })
+    )
+  }
+
+
+
+
+  return(
+    <div>
+
+    <p>{repo.name}</p>
+
+    {reposRendered}
 
     </div>
 

@@ -27,17 +27,12 @@ const SearchBar = () => {
       alert( 'the error is ' + e)
     }
 
+    //cleaning the initial state
+    setQuery('');
+
   }
 
-  console.log(query)
 
-
-  /* For example, if you wanted to search for all repositories owned by defunkt that contained the word GitHub
-   and Octocat in the README file, you would use the following query with the search repositories endpoint:
-
-q=GitHub+Octocat+in:readme+user:defunkt*/
-
-//EN ESTE COMPONENT PUEDE QUE TENGA QUE ELIMINAR EL BOTTON DE SEARCH
 
   return(
     <div className="column1">

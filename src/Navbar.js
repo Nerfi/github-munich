@@ -13,7 +13,7 @@ const ToolBar = () => {
 
         </Nav.Item>
         <Nav.Item>
-          <Nav.Link className="Link" eventKey="link-1" active>  <img src="https://img.icons8.com/material-outlined/20/000000/repository.png"/>Repositories</Nav.Link>
+          <Nav.Link className="Link" eventKey="link-1" active> <img src="https://img.icons8.com/material-outlined/20/000000/repository.png"/>Repositories</Nav.Link>
         </Nav.Item>
         <Nav.Item>
           <Nav.Link className="Link" eventKey=" link-2"><img src="https://img.icons8.com/wired/20/000000/product-documents.png"/>Projects</Nav.Link>
