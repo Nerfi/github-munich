@@ -24,6 +24,13 @@ const RenderRepos = ({repo}) => {
 
   console.log(repo,  'repo prop is here')
 
+  const changeDate = date => {
+    const desiredDate = new Date(date);
+    const dateString = desiredDate.toDateString();
+    return dateString;
+
+  };
+
   if (repo.items) {
     return(
       <div>
@@ -31,9 +38,13 @@ const RenderRepos = ({repo}) => {
 
         {repo.items.map(repo => {
           return(
-            <div>
+
+            <div className="searchedRepos">
+
              <h2 className="repoName">{repo.name}</h2>
-            <p className="description">{repo.description}</p>
+              <p className="description">{repo.description}</p>
+              <p>{repo.language} this is the language</p>
+              <p className="no-wrap">{changeDate(repo.pushed_at)}</p>
 
             </div>
           )

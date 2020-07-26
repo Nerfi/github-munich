@@ -12,3 +12,7 @@
   color: #586069!important;
   width: 75%;
 }
+
+.no-wrap {
+  white-space: nowrap!important;
+}
