@@ -5,10 +5,6 @@ const RenderRepos = ({repo}) => {
 
   const [repos, setRepos] = useState([]);
 
-  //seems to be working but not sure
-
-  const [searchRepo, setSearchRepo] = useState([]);
-
   useEffect(() => {
 
     const getRepos = async () => {
@@ -29,56 +25,42 @@ const RenderRepos = ({repo}) => {
 
     getRepos();
 
+    //login the repo prop
+    console.log(typeof(repo), 'login repo from useEffect')
+
 
   },[]);
 
-  //login the searched repos
-  console.log(searchRepo, 'aqui estan los repos buscados por el user')
-
-  //this line is working and given me and array of objects
-  console.log(repo, 'repo items is here');
 
 
+  //after submiting what the user types in
+  //the response is an object, with a 'items' key
+  //which is an array, depending on the number of repos the user has
+  console.log(repo, 'repo object after typing in  on searchBar')
 
-  let reposRendered = (
-
-        repos.map(repo => {
-      return (
-        <div className="repos">
-        <ul>
-          <li>{repo.name}</li>
-          <li>{repo.description}</li>
-
-        </ul>
-
-        </div>
-        )
-    })
-
-  )
-
-
-
-//not working: Error: too many re-rendering
-  useEffect(()=> {
-    if(repo.items) {
-
-      setSearchRepo(repo.items)
-    }
-
-  },[searchRepo])
-
-      // trying to iterate over the array that I got back from my query string, not working
-        console.log(searchRepo,'aqui esta search repo state')
-
-
-
+  if (!repo.items) return <div>Not found</div>
 
 
   return(
     <div>
 
-    {reposRendered}
+  <div>
+  { repo.items.map(repo => {
+    return(
+      <div>
+      <ul>
+        <li>{repo.full_name}</li>
+        <li>{repo.languaje}</li>
+
+      </ul>
+
+      </div>
+    )
+  })}
+
+  </div>
+
+
 
     </div>
 

@@ -31,9 +31,6 @@ const SearchBar = () => {
 
   }
 
-  console.log(query, 'the query is here')
-
-
   return(
     <div className="column1">
 
