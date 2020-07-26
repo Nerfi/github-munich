@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import './styles/renderRepos.css';
 
 const RenderRepos = ({repo}) => {
 
@@ -21,11 +22,23 @@ const RenderRepos = ({repo}) => {
     getRepos();
   }, [repo]);
 
+  console.log(repo,  'repo prop is here')
+
   if (repo.items) {
     return(
-      <>
-        {repo.items.map(repo => <p>{repo.full_name}</p>  )}
-      </>
+      <div>
+        {/*repo.items.map(repo => <p>{repo.name}</p>  )*/}
+
+        {repo.items.map(repo => {
+          return(
+            <div>
+             <h2 className="repoName">{repo.name}</h2>
+            <p className="description">{repo.description}</p>
+
+            </div>
+          )
+        })}
+      </div>
     )
 
   }

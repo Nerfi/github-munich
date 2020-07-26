@@ -3,3 +3,12 @@
   border-bottom:  1px solid #e1e4e8!important;
 
 }
+
+.repoName {
+  font-size: 20px;
+}
+
+.description {
+  color: #586069!important;
+  width: 75%;
+}

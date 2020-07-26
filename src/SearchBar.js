@@ -26,10 +26,12 @@ const SearchBar = () => {
       alert( 'the error is ' + e)
     }
 
-    //cleaning the initial state
+    //cleaning the initial state, how to clean the state now ?
     //setQuery('');
 
   }
+
+
 
   return(
     <div className="column1">
