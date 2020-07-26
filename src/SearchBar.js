@@ -27,7 +27,7 @@ const SearchBar = () => {
     }
 
     //cleaning the initial state
-    setQuery('');
+    //setQuery('');
 
   }
 
