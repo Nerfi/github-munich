@@ -34,8 +34,6 @@ const RenderRepos = ({repo}) => {
   if (repo.items) {
     return(
       <div>
-        {/*repo.items.map(repo => <p>{repo.name}</p>  )*/}
-
         {repo.items.map(repo => {
           return(
 

@@ -3,8 +3,9 @@
   border-bottom: 2px solid grey;
   padding-left: 40%;
   position: fixed;
-  top: 0;
+  top: -20px;
   overflow: hidden;
+  background-color: white;
 
 
 }
