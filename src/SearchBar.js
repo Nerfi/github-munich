@@ -15,9 +15,10 @@ const SearchBar = () => {
 
     try {
 
-      const anotherFetch = await fetch(`https://api.github.com/search/repositories?q=${query}+user:rodrigopk`)
+      //const anotherFetch = await fetch(`https://api.github.com/search/repositories?q=${query}+user:rodrigopk`)
+      const newFetchWithDocs = await fetch(`https://api.github.com/search/repositories?q=${query}+user:rodrigopk+language:${query}+in:${query}`)
 
-      const response = await anotherFetch.json();
+      const response = await newFetchWithDocs.json();
 
       setQuery(response);
 

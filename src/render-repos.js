@@ -53,7 +53,7 @@ const RenderRepos = ({repo}) => {
   }
 
   if (repos) {
-    return <>{repos.map(repo => <p>{repo.full_name}</p>)})</>
+    return <>{repos.map(repo => <p>{repo.name}</p>)})</>
   }
 
   return <>Not found</>
