@@ -60,6 +60,14 @@ describe('should render user pros info', () => {
 
   });
 
+  it('test props again ', () => {
+
+    const shalloww = shallow(
+      <UserProfile name={initialProps.name}/>
+      );
+        const adesso = shalloww.prop('name');
+    expect(adesso).toBe(initialProps.name)
+  });
 
 
 
