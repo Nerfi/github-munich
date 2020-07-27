@@ -8,7 +8,6 @@ import UserProfile from './UserProfile';
 
 
 describe('should render user pros info', () => {
-  //not sure if img key is correct here
 
   const initialProps = {
     name: 'Rodrigo Vasconcelos de Barros',
@@ -32,12 +31,18 @@ describe('should render user pros info', () => {
 
 
 
-  //NEW testing from youtube video
+  //working, thanks youtube!!!
   it('it render the correct profile name', () => {
     //not working this shit
     const text = wrapper.find('.column h2').text();
     expect(text).toEqual(initialProps.name);
     //expect(wrapper.find('userName').text().toEqual(initialProps.name))
+  });
+
+  //not working ye
+  it('render the correct img', () => {
+      expect(wrapper.find('.column img')).toHaveLength(1);
+
   });
 
 
