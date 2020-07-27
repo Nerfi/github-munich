@@ -14,7 +14,7 @@ const UserProfile = ({name, img, description,github}) => {
         <i className="fa fa-smile-o fa-2x" aria-hidden="true"></i>
       </div>
 
-      <h2>{name}</h2>
+      <h2 className="userName">{name}</h2>
       <p>{github}</p>
       <h4 className="description">{description}</h4>
       <button style={{width: '46vh', borderRadius: '80px'}}>Edit Profile</button>
