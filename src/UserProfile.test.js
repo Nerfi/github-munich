@@ -1,5 +1,5 @@
 import React from 'react';
-import Enzyme, { configure, shallow, mount, render } from 'enzyme';
+import Enzyme, { configure, shallow, mount, renderer } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 
 configure({adapter: new Adapter() })
@@ -16,12 +16,28 @@ describe('should render user pros info', () => {
     description: 'Software developer living in Munich, Germany. Currently working with ruby and javascript for mobile and web applications.',
     github: 'rodrigopk'
   }
+    //addign before each, we create this because we're always using
+    //wrapper = shallow(<UserProfile {...initialProps}/>);
+    //in all our of test
+    let wrapper;
 
-  it('should render the props pass down to the user profile component', () => {
-      //hre I'll want to create and instance of the component and see what gets render once the component mounts
-      const wrapper = shallow(<UserProfile {...initialProps}/>);
-      //find will aloow us to find a specifi item inside this componetn, en este caso no lo
-      //necesito pq no llamo a ningun component
-      expect(wrapper.find({name: true, img: true, github: true}));
+    beforeEach(()=> {
+        wrapper = shallow(<UserProfile {...initialProps}/>);
+    })
+
+
+  it('renders component', () => {
+    expect(wrapper.exists()).toBe(true);
   });
+
+  it('expecting prop nam eto be there', () => {
+    //test not working
+    expect(wrapper.props().name === 'Rodrigo Vasconcelos de Barros').toEqual(true);
+    //expect(wrapper.prop('name')).to.equal('Rodrigo Vasconcelos de Barros')
+  });
+
+
+
+
+
 });
