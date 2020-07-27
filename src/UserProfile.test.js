@@ -39,11 +39,28 @@ describe('should render user pros info', () => {
     //expect(wrapper.find('userName').text().toEqual(initialProps.name))
   });
 
-  //not working ye
+  //Working
   it('render the correct img', () => {
       expect(wrapper.find('.column img')).toHaveLength(1);
 
   });
+
+  it('it renders the given description', () => {
+    const description = wrapper.find('.column h4').text();
+    expect(description).toEqual(initialProps.description)
+
+
+  });
+
+
+  it('it renders the given github', () => {
+    const github = wrapper.find('.column p').text();
+    expect(github).toEqual(initialProps.github)
+
+
+  });
+
+
 
 
 
