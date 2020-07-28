@@ -7,7 +7,10 @@ const SearchBar = () => {
 
   const [query, setQuery] = useState('');
 
-  const handleChange = (e) => setQuery(e.target.value);
+  const [newState, setNewState ] = useState([]);
+
+
+  const handleChange = (e) => setQuery(e.target.value );
 
   const handleClick = async (e) => {
 
@@ -19,19 +22,17 @@ const SearchBar = () => {
 
       const response = await newFetchWithDocs.json();
 
-      setQuery(response);
+      //setNewState(response);
+     setQuery(response);
+
 
     }catch(e) {
 
       alert( 'the error is ' + e)
     }
 
-    //cleaning the initial state, how to clean the state now ?
-    //setQuery('');
 
   }
-
-
 
   return(
     <div className="column1">
@@ -43,7 +44,7 @@ const SearchBar = () => {
         <input  className="input" type="text" placeholder="Find a repository..." value={query} onChange={handleChange}/>
 
       </div>
-        <RenderRepos repo={query}/>
+        <RenderRepos repo={query} />
 
       </form>
   </div>
