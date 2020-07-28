@@ -1,6 +1,16 @@
 import React, {useState} from 'react';
 import './styles/renderRepos.css';
 
+
+/* This comoponent mission is to display and
+  <ul>
+  <li>/li>
+  </ul>
+  on which we will display the data given to this component by is father , RenderRepos
+  the data display will depend on the action taken by the user, if the user typed in a query on the inpt field
+  the component will render the response from that API, otherwise will render the default repositories of the
+  given user */
+
 const RenderData = ({repos, repo}) => {
 
     const changeDate = date => {

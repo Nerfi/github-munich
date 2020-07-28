@@ -1,6 +1,8 @@
 import React from 'react';
 import './layout.css';
 
+/* This is a presentational/dummy component which mission is just to render data(props) given by a Parent component <App/> */
+
 const UserProfile = ({name, img, description,github}) => {
 
 

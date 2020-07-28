@@ -3,14 +3,21 @@ import './layout.css';
 import RenderRepos from './render-repos';
 import './styles/searchBar.css';
 
+/* SearchBar component , this component takes the query given by the user, according to what he/she types in
+and send and HPPT GET request to Github API  , the result of that request is send as a prop to  <RenderRepos repo={query} />
+the API call is made using async and await ES6 features */
+
+
 const SearchBar = () => {
 
   const [query, setQuery] = useState('');
 
   const [newState, setNewState ] = useState([]);
 
-
+   //this function will be trigger on every keydown events
   const handleChange = (e) => setQuery(e.target.value );
+
+  //this function will submit the request and make and API call
 
   const handleClick = async (e) => {
 
