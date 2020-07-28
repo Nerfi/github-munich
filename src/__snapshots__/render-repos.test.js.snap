@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RenderRepos componet returns the array with default repos 1`] = `ShallowWrapper {}`;

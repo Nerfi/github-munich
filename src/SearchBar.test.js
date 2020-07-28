@@ -2,16 +2,26 @@ import React from 'react';
 import Enzyme, { configure, shallow, mount, render } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import SearchBar from './SearchBar';
+import RenderRepos from './render-repos';
+
 
 configure({adapter: new Adapter()});
 
 describe('Search component', () => {
 
    let wrapper;
+   //hooks and state update
+    const setState = jest.fn();
+   let useStateSpy = jest.spyOn(React, 'useState')
+   useStateSpy.mockImplementation((init) => [init, setState]);
 
     beforeEach(()=> {
         wrapper = shallow(<SearchBar/>);
-    })
+    });
+
+    afterEach(() => {
+      jest.clearAllMocks();
+    });
 
 
     it('renders', () => {
@@ -49,6 +59,20 @@ describe('Search component', () => {
     });
 
 
+  //checking that the default value of the field in empty
+  it('the default value should be empty', () => {
+
+    const emptyInput = wrapper.find('.input');
+   expect(emptyInput.props().value).toBe('');
+    //expect(wrapper.find('input[name="email"]').prop('value')).toBe('');
 
 
-})
+  });
+  //working
+  it('renders child component', () => {
+    expect(wrapper.containsMatchingElement(<RenderRepos />)).toEqual(true);
+
+  });
+
+
+});
