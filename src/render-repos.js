@@ -40,10 +40,13 @@ const RenderRepos = ({repo}) => {
 
             <div className="searchedRepos">
 
-             <h2 className="repoName">{repo.name}</h2>
-              <p className="description">{repo.description}</p>
-              <p>{repo.language} this is the language</p>
-              <p className="no-wrap">{changeDate(repo.pushed_at)}</p>
+             <h2 className="d-flex width-full p-4">{repo.name}</h2>
+              <p className="d-flex p-4">{repo.description}</p>
+
+              <div className="f6 text-grey mt-2">
+                <p className="d-flex p-4">{repo.language} this is the language</p>
+                <p className="d-flex p-4">updated{changeDate(repo.pushed_at)}</p>
+              </div>
 
             </div>
           )
@@ -54,18 +57,28 @@ const RenderRepos = ({repo}) => {
   }
 
   if (repos) {
-    // aqui me falta
+    // aqui van las repos by default
     return(
     <div>
+
     {repos.map(repo => {
       return(
       <div className="user-repositories-list">
 
         <ul>
-          <li>{repo.name}</li>
-          <li>{repo.language}</li>
-          <li>{changeDate(repo.pushed_at)}</li>
-          <li>{repo.description}</li>
+        <div className="d-inline-block" >
+
+          <li className="d-flex width-full p-4"><h1>{repo.name}</h1></li>
+          <li className="d-flex p-4"><h3>{repo.description}</h3></li>
+
+          <div className="f6 text-grey mt-2">
+
+            <li className="d-flex p-4">{repo.language}</li>
+            <li className="d-flex p-4">updated {changeDate(repo.pushed_at)}</li>
+          </div>
+
+        </div>
+
         </ul>
 
 

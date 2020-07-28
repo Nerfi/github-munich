@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 .repos {
 
   border-bottom:  1px solid #e1e4e8!important;
@@ -15,4 +19,57 @@
 
 .no-wrap {
   white-space: nowrap!important;
+}
+
+/*ul {
+ /* padding-left: 30px;
+  /*margin-top: 0;
+  /*margin-bottom: 0;
+  /*list-style-type: disc;
+}*/
+
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+li {
+  text-align: -webkit-match-parent;
+}
+
+.d-flex {
+  display: flex!important;
+}
+
+.py-4 {
+    padding-top: 24px!important;
+    padding-bottom: 24px!important;
+
+}
+
+.width-full {
+    width: 100%!important;
+}
+
+.d-inline-block {
+  display: inline-block!important;
+}
+
+
+.f6 {
+  font-size: 12px;
+  display: flex;
+}
+
+.mt-2{
+  margin-top: 8px;
+}
+
+.text-gray {
+  color: #586069!important;
 }
