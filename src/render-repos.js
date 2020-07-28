@@ -20,9 +20,10 @@ const RenderRepos = ({repo}) => {
     };
 
     getRepos();
+
   }, [repo]);
 
-  console.log(repo,  'repo prop is here')
+  console.log(repos,  'repos prop is here')
 
   const changeDate = date => {
     const desiredDate = new Date(date);
@@ -53,7 +54,27 @@ const RenderRepos = ({repo}) => {
   }
 
   if (repos) {
-    return <>{repos.map(repo => <p>{repo.name}</p>)})</>
+    // aqui me falta
+    return(
+    <div>
+    {repos.map(repo => {
+      return(
+      <div className="user-repositories-list">
+
+        <ul>
+          <li>{repo.name}</li>
+          <li>{repo.language}</li>
+          <li>{changeDate(repo.pushed_at)}</li>
+          <li>{repo.description}</li>
+        </ul>
+
+
+      </div>
+
+      )
+    })}
+    </div>
+    )
   }
 
   return <>Not found</>

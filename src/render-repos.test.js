@@ -5,4 +5,4 @@ import RenderRepos from './render-repos';
 
 configure({adapter: new Adapter()});
 
-//aqui mi proo es una string
+//aqui lo que voy a testear esque la API call sea buena
