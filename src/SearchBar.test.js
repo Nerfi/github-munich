@@ -41,6 +41,13 @@ describe('Search component', () => {
 
     });
 
+    //working
+
+    it('It has an input field', () => {
+      const input = wrapper.find('.input');
+      expect(input.props().value).toBe('');
+    });
+
 
 
 

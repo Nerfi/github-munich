@@ -31,7 +31,7 @@ const RenderRepos = ({repo}) => {
     return dateString;
 
   };
-
+  //estos son los repos que el usuario ha buscado
   if (repo.items) {
     return(
       <div>

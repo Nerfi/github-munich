@@ -2,14 +2,12 @@
 /* Control the left side */
 .left {
   left: 0;
-  border-style: dotted;
 
 }
 
 /* Control the right side */
 .right {
   right: 0;
-  border-style: dashed;
 
 }
 
@@ -46,7 +44,6 @@
   flex: 1 1 auto;
   height: 100%;
   width: 30%;
-  border-style: dotted;
   max-width: 50%;
   margin-top: 40px;
   padding-left:  35px;
@@ -61,7 +58,6 @@
   flex: 1 1 auto;
   height: 100%;
   width:70%;
-  border-style: dashed;
 
 }
 
@@ -78,7 +74,6 @@ NEED TO ADD MEDIA QUERYS FOR PRETTY MUCH ALL THE SCREENS IN */
   flex: 1 1 auto;
   height: 100%;
   width: 50%;
-  border-style: dotted;
   max-width: 50%;
 
   }
@@ -89,7 +84,7 @@ NEED TO ADD MEDIA QUERYS FOR PRETTY MUCH ALL THE SCREENS IN */
   flex: 1 1 auto;
   height: 100%;
   width: 60%;
-  border-style: dotted;
+
   max-width: 50%;
 
   }
@@ -98,7 +93,7 @@ NEED TO ADD MEDIA QUERYS FOR PRETTY MUCH ALL THE SCREENS IN */
     flex: 1 1 auto;
   height: 100%;
   width: 300%;
-  border-style: dotted;
+
   max-width: 50%;
   padding-left:  35px;
   }
@@ -109,7 +104,7 @@ NEED TO ADD MEDIA QUERYS FOR PRETTY MUCH ALL THE SCREENS IN */
   flex: 1 1 auto;
   height: 80%;
   width:50%;
-  border-style: dashed;
+
 
 }
 

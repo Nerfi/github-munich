@@ -2,11 +2,7 @@
   box-sizing: border-box;
 }
 
-.repos {
 
-  border-bottom:  1px solid #e1e4e8!important;
-
-}
 
 .repoName {
   font-size: 20px;
@@ -44,6 +40,7 @@ li {
 
 .d-flex {
   display: flex!important;
+
 }
 
 .py-4 {
@@ -54,6 +51,7 @@ li {
 
 .width-full {
     width: 100%!important;
+    color: blue;
 }
 
 .d-inline-block {
